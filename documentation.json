@@ -1,0 +1,19 @@
+{
+    "title": "Doctasia",
+    "pages": [
+        {
+            "title": "Doctasia",
+            "path": "README",
+            "menuLevel": 3
+        },
+        {
+            "title": "Configuration",
+            "path": "README_CONFIG",
+            "menuLevel": 2
+        }, {
+            "title": "License",
+            "path": "LICENSE",
+            "menuLevel": 0
+        }
+    ]
+}

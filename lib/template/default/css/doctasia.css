@@ -1,0 +1,21 @@
+.nav-list > li > a, .nav-list .nav-1 {
+    margin-right: -15px;
+    margin-left: -15px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.nav-1 {
+    display: block;
+    padding: 3px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    text-transform: uppercase;
+}
+
+.nav-2 {
+    font-weight: normal;
+    font-size: 11px;
+}
