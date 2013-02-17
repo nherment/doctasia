@@ -7,8 +7,10 @@ Doctasia is a straightforward static website generator for Markdown documentatio
 
 # Quick start
 
+```
   $> npm install -g doctasia
   $> doctasia
+```
 
 # Configuration
 

@@ -1,5 +1,6 @@
 {
     "title": "Doctasia",
+    "css": [],
     "pages": [
         {
             "title": "Home",
@@ -10,6 +11,11 @@
             "title": "Configuration",
             "path": "README_CONFIG.md",
             "menuLevel": 0
+        },
+        {
+            "title": "Example",
+            "path": "EXAMPLE.md",
+            "menuLevel": 3
         }, {
             "title": "License",
             "path": "LICENSE.md",

@@ -1,5 +1,3 @@
-# License (MIT)
-
 Copyright (c) 2013 Nicolas Herment
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

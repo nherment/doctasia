@@ -5,23 +5,47 @@
 }
 
 .nav-1 {
-    /*display: block;*/
-    /*padding: 3px 15px;*/
-    /*font-size: 12px;*/
-    /*font-weight: bold;*/
-    /*line-height: 20px;*/
-    /*color: #999;*/
-    /*text-shadow: 0 1px 0 rgba(255,255,255,0.5);*/
-    /*text-transform: uppercase;*/
     padding-left: 0px;
 }
 
 .nav-2 {
     padding-left: 3px;
 }
+
 .nav-3 {
     padding-left: 10px;
 }
-body {
-    font: 14px/22px "Fertigo Pro Script", Georgia, sans-serif;
+
+.nav-3 {
+    padding-left: 15px;
+}
+
+h1 {
+    color: #034769;
+    font-size: 28px;
+}
+
+h2 {
+    color: #086FA1;
+    font-size: 25px;
+}
+
+h3 {
+
+}
+
+.navbar-inverse .navbar-inner {
+    background-color: #034769;
+    background-image: none;
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    color: #FFC373;
+    background-color: #25567B;
+}
+.navbar-inverse .nav > a, .navbar-inverse .nav > a:hover, .navbar-inverse .nav > a:focus {
+    color: #FF9200;
+}
+
+a:hover {
+    color: #FF9200;
 }
