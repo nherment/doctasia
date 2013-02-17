@@ -9,13 +9,32 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/doctasia.css">
+
+    {#css}
+        <link rel="stylesheet" type="text/css" href="{.}">
+    {/css}
+
+    <!-- Typekit -->
+
+    <script type="text/javascript">
+        (function() {
+            var config = {
+                kitId: 'hjp0pft',
+                scriptTimeout: 3000
+            };
+            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/( |^)wf-loading( |$)/g,"");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script");tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(a&&a!="complete"&&a!="loaded")return;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+        })();
+    </script>
+
     <style type="text/css">
-        body {
-            padding-top: 60px;
-            padding-bottom: 40px;
-        }
+        /*body {*/
+            /*padding-top: 60px;*/
+            /*padding-bottom: 40px;*/
+        /*}*/
         .sidebar-nav {
-            padding: 9px 0;
+            padding-top: 60px;
+            padding-left: 10px;
+            max-width: 300px;
         }
 
         @media (max-width: 980px) {
@@ -30,7 +49,8 @@
 
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
+<a name="top"></a>
+<div class="navbar navbar-inverse">
     <div class="navbar-inner">
         <div class="container-fluid">
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -38,14 +58,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">{title}</a>
+            <a class="brand" href="index.html">{title}</a>
             <div class="nav-collapse collapse">
                 <p class="navbar-text pull-right">
                     <a href="https://github.com/nherment/doctasia">About doctasia</a>
                 </p>
                 <ul class="nav">
-                    {#pages}
-                    <li class="active"><a href="{name}.html">{title}</a></li>{~n}
+                    {#pages currentPageTitle=currentPage.title }
+                    <li {@eq key=currentPageTitle value=title}class="active"{/eq}><a href="{name}.html">{title}</a></li>{~n}
                     {/pages}
                 </ul>
             </div><!--/.nav-collapse -->
@@ -54,9 +74,9 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row-fluid">
+    <div class="row-fluid" id="content">
         <div class="span3">
-            <div class=" sidebar-nav">
+            <div class="sidebar-nav hidden-desktop">
                 <ul class="nav nav-list">
                     {#currentPage}
                     {#menu}
@@ -64,6 +84,18 @@
                     {/menu}
                     {/currentPage}
                 </ul>
+            </div><!--/.well -->
+            <div class="sidebar-nav hidden-phone navbar-fixed-top">
+                {#currentPage}<h1>{title}</h1>{/currentPage}
+                <ul class="nav nav-list">
+                    {#currentPage}
+                    {#menu}
+                    <li class="nav-{level}" class="active"><a href="#{id}">{label}</a></li>{~n}
+                    {/menu}
+                    {/currentPage}
+                </ul>
+                <br/>
+                <a href="#top">back to top</a>
             </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
@@ -76,7 +108,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Company 2013</p>
+        <p>Copyright &copy; 2013 Nicolas Herment</p>
     </footer>
 
 </div><!--/.fluid-container-->

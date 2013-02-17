@@ -5,17 +5,23 @@
 }
 
 .nav-1 {
-    display: block;
-    padding: 3px 15px;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 20px;
-    color: #999;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-    text-transform: uppercase;
+    /*display: block;*/
+    /*padding: 3px 15px;*/
+    /*font-size: 12px;*/
+    /*font-weight: bold;*/
+    /*line-height: 20px;*/
+    /*color: #999;*/
+    /*text-shadow: 0 1px 0 rgba(255,255,255,0.5);*/
+    /*text-transform: uppercase;*/
+    padding-left: 0px;
 }
 
 .nav-2 {
-    font-weight: normal;
-    font-size: 11px;
+    padding-left: 3px;
+}
+.nav-3 {
+    padding-left: 10px;
+}
+body {
+    font: 14px/22px "Fertigo Pro Script", Georgia, sans-serif;
 }

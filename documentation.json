@@ -2,14 +2,14 @@
     "title": "Doctasia",
     "pages": [
         {
-            "title": "Doctasia",
+            "title": "Home",
             "path": "README.md",
             "menuLevel": 3
         },
         {
             "title": "Configuration",
             "path": "README_CONFIG.md",
-            "menuLevel": 2
+            "menuLevel": 0
         }, {
             "title": "License",
             "path": "LICENSE.md",

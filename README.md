@@ -1,21 +1,17 @@
+Doctasia is a straightforward static website generator for Markdown documentation.
 
-# Doctasia
+# Features
+- multi pages
+- customizable style
+- work out of the box
 
-Doctasia is a multi-page documentation generator based on Markdown files.
+# Quick start
 
-Works out of the box, easily extensible.
+  $> npm install -g doctasia
+  $> doctasia
 
-Features:
-- Generates static files
-- Auto-generated and configurable menu
-- Customizable style
-- Easy to include in your automated build
+# Configuration
 
-## Conf1
+You can configure how Doctasia generates your documentation with a manifest file.
+By default doctasia looks for a file named `documentation.json` in the `cwd`.
 
-The conf is this thus that
-
-
-# In the pipe
-- read README and LICENSE files if there is no manifest
-- read package.json if there is no manifest
