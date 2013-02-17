@@ -3,16 +3,16 @@
     "pages": [
         {
             "title": "Doctasia",
-            "path": "README",
+            "path": "README.md",
             "menuLevel": 3
         },
         {
             "title": "Configuration",
-            "path": "README_CONFIG",
+            "path": "README_CONFIG.md",
             "menuLevel": 2
         }, {
             "title": "License",
-            "path": "LICENSE",
+            "path": "LICENSE.md",
             "menuLevel": 0
         }
     ]
