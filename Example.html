@@ -50,7 +50,6 @@
                 </p>
                 <ul class="nav">
                     <li ><a href="index.html">Home</a></li>
-<li ><a href="Configuration.html">Configuration</a></li>
 <li class="active"><a href="Example.html">Example</a></li>
 <li ><a href="License.html">License</a></li>
 </ul>
@@ -61,102 +60,75 @@
 
 <div class="container-fluid">
     <div class="row-fluid" id="content">
-        <div class="span3">
-            <div class="sidebar-nav hidden-phone navbar-fixed-top">
+        <div class="span3 hidden-phone">
+            <div class="sidebar-nav navbar-fixed-top">
                 <h1>Example</h1>
                     <ul class="nav nav-list">
-                        <li class="nav-2" class="active"><a href="#layout__default">layout: default</a></li>
-<li class="nav-1" class="active"><a href="#Introduction_to_GFM">Introduction to GFM</a></li>
-<li class="nav-2" class="active"><a href="#Differences_from_traditional_Markdown">Differences from traditional Markdown</a></li>
-<li class="nav-3" class="active"><a href="#Newlines">Newlines</a></li>
-<li class="nav-3" class="active"><a href="#Multiple_underscores_in_words">Multiple underscores in words</a></li>
-<li class="nav-3" class="active"><a href="#URL_autolinking">URL autolinking</a></li>
-<li class="nav-3" class="active"><a href="#Fenced_code_blocks">Fenced code blocks</a></li>
-<li class="nav-3" class="active"><a href="#Syntax_highlighting">Syntax highlighting</a></li>
-<li class="nav-2" class="active"><a href="#A_bit_of_the_GitHub_spice">A bit of the GitHub spice</a></li>
-<li class="nav-3" class="active"><a href="#References">References</a></li>
-<li class="nav-3" class="active"><a href="#Task_Lists">Task Lists</a></li>
-<li class="nav-4" class="active"><a href="#H4_title">H4 title</a></li>
-<li class="nav-5" class="active"><a href="#H5_title">H5 title</a></li>
-<li class="nav-2" class="active"><a href="#Code">Code</a></li>
+                        <li class="nav-1" class="active"><a href="#Introduction_to_Doctasia">Introduction to Doctasia</a></li>
+<li class="nav-2" class="active"><a href="#The_page_is_rendered_like_traditional_Markdown">The page is rendered like traditional Markdown</a></li>
+<li class="nav-2" class="active"><a href="#However__the_left_menu_is_generated_so_that_you_can_better_navigate">However, the left menu is generated so that you can better navigate</a></li>
+<li class="nav-3" class="active"><a href="#This_is_a_h3_tag">This is a h3 tag</a></li>
+<li class="nav-4" class="active"><a href="#a_h4">a h4</a></li>
+<li class="nav-5" class="active"><a href="#and_a_h5">and a h5</a></li>
+<li class="nav-1" class="active"><a href="#Left_menu">Left menu</a></li>
+<li class="nav-2" class="active"><a href="#Lorem_ipsum">Lorem ipsum</a></li>
 </ul>
                     <br/>
                     <a href="#top">back to top</a>
                     </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-            <hr>
-<p>title: Introduction</p>
-<a name="layout__default"></a><h2>layout: default</h2>
-<a name="Introduction_to_GFM"></a><h1>Introduction to GFM</h1>
-<p>GitHub uses what we&#39;re calling &quot;GitHub Flavored Markdown&quot; (GFM) for messages, issues, and comments. It differs from standard Markdown (SM) in a few significant ways and adds some additional functionality.</p>
-<p>If you&#39;re not already familiar with Markdown, you should spend 15 minutes and go over the excellent <a href="http://daringfireball.net/projects/markdown/syntax">Markdown Syntax Guide</a> at Daring Fireball.</p>
-<p>If you prefer to learn by example, see the following source and result:</p>
-<ul>
-<li><a href="http://github.github.com/github-flavored-markdown/sample_content.html">Source</a></li>
-<li><a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1">Result</a></li>
-</ul>
-<p>If you&#39;re interested in how we render Markdown files, you might want to check out <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, our Ruby interface to the <a href="https://www.github.com/vmg/sundown">Sundown</a> library.</p>
-<a name="Differences_from_traditional_Markdown"></a><h2>Differences from traditional Markdown</h2>
-<a name="Newlines"></a><h3>Newlines</h3>
-<p>The biggest difference that GFM introduces is in the handling of linebreaks. With SM you can hard wrap paragraphs of text and they will be combined into a single paragraph. We find this to be the cause of a huge number of unintentional formatting errors. GFM treats newlines in paragraph-like content as real line breaks, which is probably what you intended.</p>
-<p>The next paragraph contains two phrases separated by a single newline character:</p>
-<pre class="prettyprint"><code>Roses are red
-Violets are blue</code></pre>
-<p>becomes</p>
-<p>Roses are red<br>Violets are blue</p>
-<a name="Multiple_underscores_in_words"></a><h3>Multiple underscores in words</h3>
-<p>It is not reasonable to italicize just <em>part</em> of a word, especially when you&#39;re dealing with code and names often appear with multiple underscores. Therefore, GFM ignores multiple underscores in words.</p>
-<pre><code>perform_complicated_task
-do_this_and_do_that_and_another_thing</code></pre>
-<p>becomes</p>
-<p>perform_complicated_task
-do_this_and_do_that_and_another_thing</p>
-<a name="URL_autolinking"></a><h3>URL autolinking</h3>
-<p>GFM will autolink standard URLs, so if you want to link to a URL (instead of setting link text), you can simply enter the URL and it will be turned into a link to that URL.</p>
-<a name="Fenced_code_blocks"></a><h3>Fenced code blocks</h3>
-<p>Markdown converts text with four spaces at the front of each line to code blocks. GFM supports that, but we also support fenced blocks. Just wrap your code blocks in <code>```</code> and you won&#39;t need to indent manually to trigger a code block.</p>
-<a name="Syntax_highlighting"></a><h3>Syntax highlighting</h3>
-<p>We take code blocks a step further and add syntax highlighting if you request it. In your fenced block, add an optional language identifier and we&#39;ll run it through syntax highlighting. For example, to syntax highlight Ruby code:</p>
-<pre><code>```ruby
-require &#39;redcarpet&#39;
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
-puts markdown.to_html
-```</code></pre>
-<a name="A_bit_of_the_GitHub_spice"></a><h2>A bit of the GitHub spice</h2>
-<a name="References"></a><h3>References</h3>
-<p>In addition to the changes in the previous section, certain references are auto-linked:</p>
-<pre><code>* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* \#Num: #1
-* User/#Num: mojombo#1
-* User/Project#Num: mojombo/god#1</code></pre>
-<p>becomes</p>
-<ul>
-<li>SHA: <a href="http://github.com/mojombo/github-flavored-markdown/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">be6a8cc</a></li>
-<li>User@SHA ref: <a href="http://github.com/mojombo/github-flavored-markdown/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">mojombo@be6a8cc</a></li>
-<li>User/Project@SHA: <a href="http://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">mojombo/god@be6a8cc</a></li>
-<li>#Num: <a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1" class="internal">#1</a></li>
-<li>User/#Num: <a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1">mojombo#1</a></li>
-<li>User/Project#Num: <a href="http://github.com/mojombo/god/issues/#issue/1">mojombo/god#1</a></li>
-</ul>
-
-<a name="Task_Lists"></a><h3>Task Lists</h3>
-<a name="H4_title"></a><h4>H4 title</h4>
-<a name="H5_title"></a><h5>H5 title</h5>
-<h6>H6 title</h6>
-<p>Further, lists can be turned into <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">Task Lists</a> by prefacing list items with <code>[ ]</code> or <code>[x]</code> (incomplete or complete, respectively).</p>
-<pre><code>- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item</code></pre>
-<p>This feature is enabled for <strong>Issue and Pull Request descriptions and comments</strong>. In those contexts, task lists will be rendered with checkboxes that you can check on and off.</p>
-<p>See the <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">Task Lists blog post</a> for more details.</p>
-<a name="Code"></a><h2>Code</h2>
-<p>The newline and underscore modification code can be seen below. If you find a bug in the rendering, we&#39;d love to hear about it.
-Browse through open Issues and report new Issues on the <a href="https://github.com/github/github-flavored-markdown/issues">GitHub-flavored Markdown Issues page</a>.</p>
-<script src="http://gist.github.com/118964.js"></script></div><!--/span-->
+            <p>This markdown can be seen at <a href="http://github.github.com/github-flavored-markdown/sample_content.html">Doctasia</a></p>
+<a name="Introduction_to_Doctasia"></a><h1>Introduction to Doctasia</h1>
+<p><strong>Doctasia</strong> uses what is called <a href="http://github.github.com/github-flavored-markdown">GitHub Flavored Markdown (GFM)</a>.</p>
+<p>If you&#39;re not already familiar with Markdown, read the <a href="http://daringfireball.net/projects/markdown/syntax">Markdown Syntax Guide</a> at Daring Fireball.</p>
+<p>We render the markdown files through the excellent <a href="https://github.com/chjj/marked">marked</a></p>
+<a name="The_page_is_rendered_like_traditional_Markdown"></a><h2>The page is rendered like traditional Markdown</h2>
+<a name="However__the_left_menu_is_generated_so_that_you_can_better_navigate"></a><h2>However, the left menu is generated so that you can better navigate</h2>
+<a name="This_is_a_h3_tag"></a><h3>This is a h3 tag</h3>
+<a name="a_h4"></a><h4>a h4</h4>
+<a name="and_a_h5"></a><h5>and a h5</h5>
+<h6>but this h6 is not visible on the left menu</h6>
+<p>because <code>menuLevel</code> is set to 5</p>
+<a name="Left_menu"></a><h1>Left menu</h1>
+<p>The left menu will follow scrolling</p>
+<p>The left menu is not visible on phones and tablets.</p>
+<a name="Lorem_ipsum"></a><h2>Lorem ipsum</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet arcu in urna imperdiet viverra. Suspendisse
+varius tincidunt dapibus. Sed velit orci, mollis at aliquam quis, faucibus ac massa. Aenean nunc augue, viverra et porta
+at, porttitor id enim. Vivamus vitae sollicitudin nisl. Integer felis nisl, cursus non imperdiet id, bibendum a massa.
+Donec fermentum nisl ut risus molestie at tincidunt nibh fringilla. Integer consequat, libero sed elementum condimentum,
+velit quam blandit diam, in lacinia ante turpis ac urna. Vestibulum ante ipsum primis in faucibus orci luctus et
+ultrices posuere cubilia Curae; Phasellus sed hendrerit erat. Integer cursus cursus dui, quis volutpat leo malesuada
+laoreet.</p>
+<p>Donec commodo eleifend turpis, ut rhoncus erat sagittis in. Suspendisse volutpat, enim quis commodo molestie, orci leo
+ullamcorper orci, sit amet varius tortor libero nec erat. Vivamus vitae felis nisi, eget molestie diam. Vestibulum
+sodales consequat lorem sit amet pulvinar. Sed mollis viverra mollis. Suspendisse potenti. Cum sociis natoque penatibus
+et magnis dis parturient montes, nascetur ridiculus mus. Donec nulla libero, feugiat vitae cursus sit amet, vulputate
+eget turpis. Sed interdum convallis sem, vel tempor tellus congue nec. Vestibulum vel mi non dolor imperdiet accumsan at
+sed nunc. Ut nisi ante, ultrices id scelerisque in, eleifend a purus. Ut ut arcu odio, quis blandit lorem. Nullam luctus
+imperdiet accumsan. Nulla faucibus felis commodo felis luctus egestas sit amet ut nisl. Vivamus elit arcu, hendrerit
+dignissim tincidunt vitae, suscipit a enim. Nullam commodo, justo condimentum lobortis dapibus, diam felis varius nisi,
+in malesuada massa diam ut mauris.</p>
+<p>Donec a pellentesque ipsum. Morbi nunc turpis, cursus vel ullamcorper at, consectetur eu turpis. Pellentesque dui purus,
+commodo non tincidunt a, feugiat ac mauris. Proin nec odio nec nunc dictum imperdiet at vitae quam. Nam dapibus purus
+arcu, vel sagittis lacus. Etiam leo tellus, tempor id facilisis non, congue eget ante. Ut placerat auctor risus, sed
+feugiat lacus condimentum sed. Nam commodo dui eget sapien bibendum lobortis. Morbi metus dui, sodales non mattis a,
+blandit a erat. Cras vel dolor at enim scelerisque tincidunt. Aliquam sollicitudin, odio non ultrices porta, urna orci
+volutpat ante, semper rutrum orci velit ut quam. Cras dignissim condimentum iaculis. Integer pharetra, augue ut suscipit
+fermentum, tellus arcu varius ante, eu tincidunt nisl metus et tellus.</p>
+<p>Nulla semper libero a lacus dictum gravida. Ut in quam a dui lobortis porttitor eget eu tortor. Suspendisse potenti.
+Maecenas lectus nibh, hendrerit nec ultricies eu, vulputate ac justo. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit. Quisque at pretium nisl. Mauris luctus justo eget sapien porta sed consectetur purus porttitor. Fusce nec diam
+magna, a laoreet lorem. Nunc dapibus felis ante, nec volutpat risus. Nunc porta suscipit dolor. Nullam sollicitudin
+bibendum felis eget elementum.</p>
+<p>Mauris vel urna quis magna mattis mattis. Pellentesque consequat, augue a laoreet porta, sapien augue laoreet tellus,
+vel scelerisque ipsum enim a nisi. In accumsan mattis sem in sollicitudin. Nam imperdiet tellus ut erat accumsan
+suscipit. Nullam at libero vel leo dictum congue sed a purus. Vivamus leo sem, vulputate et hendrerit id, eleifend quis
+lacus. Nam dictum tincidunt lectus, quis lobortis magna iaculis ut. Nullam dapibus accumsan tortor, auctor adipiscing
+odio tincidunt sed. Nunc porttitor varius nulla, id blandit mauris dignissim eget. Maecenas tincidunt pretium nulla non
+blandit.</p>
+</div><!--/span-->
     </div><!--/row-->
 
     <hr>

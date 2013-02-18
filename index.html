@@ -50,7 +50,6 @@
                 </p>
                 <ul class="nav">
                     <li class="active"><a href="index.html">Home</a></li>
-<li ><a href="Configuration.html">Configuration</a></li>
 <li ><a href="Example.html">Example</a></li>
 <li ><a href="License.html">License</a></li>
 </ul>
@@ -61,32 +60,57 @@
 
 <div class="container-fluid">
     <div class="row-fluid" id="content">
-        <div class="span3">
-            <div class="sidebar-nav hidden-phone navbar-fixed-top">
+        <div class="span3 hidden-phone">
+            <div class="sidebar-nav navbar-fixed-top">
                 <h1>Home</h1>
                     <ul class="nav nav-list">
                         <li class="nav-1" class="active"><a href="#Features">Features</a></li>
 <li class="nav-1" class="active"><a href="#Quick_start">Quick start</a></li>
 <li class="nav-1" class="active"><a href="#Configuration">Configuration</a></li>
+<li class="nav-1" class="active"><a href="#In_the_pipeline">In the pipeline</a></li>
 </ul>
                     <br/>
                     <a href="#top">back to top</a>
                     </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-            <p>Doctasia is a straightforward static website generator for Markdown documentation.</p>
+            <p><strong>Doctasia</strong> is a straightforward static website generator for Markdown documentation.</p>
 <a name="Features"></a><h1>Features</h1>
 <ul>
 <li>multi pages</li>
 <li>customizable style</li>
-<li>work out of the box</li>
+<li>hassle free</li>
 </ul>
 <a name="Quick_start"></a><h1>Quick start</h1>
-<pre class="prettyprint"><code>  $&gt; npm install -g doctasia
-  $&gt; doctasia</code></pre>
+<pre class="prettyprint"><code>  npm install -g doctasia
+  doctasia</code></pre>
 <a name="Configuration"></a><h1>Configuration</h1>
 <p>You can configure how Doctasia generates your documentation with a manifest file.
-By default doctasia looks for a file named <code>documentation.json</code> in the <code>cwd</code>.</p>
+By default doctasia looks for a file named <code>documentation.json</code> in the <code>cwd</code>. All paths are relative to the <code>cwd</code></p>
+<pre><code>{
+    &quot;title&quot;: &quot;Doctasia&quot;, /* the website title */
+    &quot;pages&quot;: [
+        {
+            &quot;title&quot;: &quot;Home&quot;, /* the name given to the page */
+            &quot;path&quot;: &quot;README.md&quot;, /* that path to the markdown file for thid page&#39;s content */
+            &quot;menuLevel&quot;: 3 /* how many menu levels should this page&#39;s menu contain */
+        },
+        {
+            &quot;title&quot;: &quot;Example&quot;,
+            &quot;path&quot;: &quot;EXAMPLE.md&quot;,
+            &quot;menuLevel&quot;: 5
+        }, {
+            &quot;title&quot;: &quot;License&quot;,
+            &quot;path&quot;: &quot;LICENSE.md&quot;,
+            &quot;menuLevel&quot;: 0 /* no left menu will be displayed */
+        }
+    ]
+}</code></pre>
+<a name="In_the_pipeline"></a><h1>In the pipeline</h1>
+<ul>
+<li>color highlighting of code snippets</li>
+<li>better UI</li>
+</ul>
 </div><!--/span-->
     </div><!--/row-->
 
