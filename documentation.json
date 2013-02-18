@@ -8,11 +8,6 @@
             "menuLevel": 3
         },
         {
-            "title": "Configuration",
-            "path": "README_CONFIG.md",
-            "menuLevel": 0
-        },
-        {
             "title": "Example",
             "path": "EXAMPLE.md",
             "menuLevel": 5
