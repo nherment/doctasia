@@ -1,10 +1,10 @@
 {
     "name": "doctasia",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Nicolas Herment <nherment@gmail.com>",
     "preferGlobal": "true",
     "dependencies": {
-        "node-markdown"     : "0.1.1",
+        "marked"            : "0.2.8",
         "dustjs-linkedin"   : "1.2.0",
         "dustjs-helpers"    : "1.1.1",
         "argsparser"        : "0.0.6",

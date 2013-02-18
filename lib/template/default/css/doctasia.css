@@ -1,23 +1,18 @@
-.nav-list > li > a, .nav-list .nav-1 {
-    margin-right: -15px;
-    margin-left: -15px;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-}
 
 .nav-1 {
     padding-left: 0px;
 }
-
 .nav-2 {
     padding-left: 3px;
 }
-
 .nav-3 {
     padding-left: 10px;
 }
-
-.nav-3 {
-    padding-left: 15px;
+.nav-4 {
+    padding-left: 17px;
+}
+.nav-5 {
+    padding-left: 23px;
 }
 
 h1 {
@@ -31,7 +26,23 @@ h2 {
 }
 
 h3 {
+    color: #086FA1;
+    font-size: 20px;
+}
 
+h4 {
+    color: #086FA1;
+    font-size: 18px;
+}
+
+h5 {
+    color: #086FA1;
+    font-size: 17px;
+}
+
+h6 {
+    color: #086FA1;
+    font-size: 16px;
 }
 
 .navbar-inverse .navbar-inner {

@@ -15,7 +15,7 @@
         {
             "title": "Example",
             "path": "EXAMPLE.md",
-            "menuLevel": 3
+            "menuLevel": 5
         }, {
             "title": "License",
             "path": "LICENSE.md",

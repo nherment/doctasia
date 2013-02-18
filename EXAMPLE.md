@@ -1,125 +1,114 @@
-An h1 header
-============
+---
+title: Introduction
+layout: default
+---
 
-Paragraphs are separated by a blank line.
+#Introduction to GFM
 
-2nd paragraph. *Italic*, **bold**, `monospace`. Itemized lists
-look like:
+GitHub uses what we're calling "GitHub Flavored Markdown" (GFM) for messages, issues, and comments. It differs from standard Markdown (SM) in a few significant ways and adds some additional functionality.
 
-  * this one
-  * that one
-  * the other one
+If you're not already familiar with Markdown, you should spend 15 minutes and go over the excellent [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) at Daring Fireball.
 
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+If you prefer to learn by example, see the following source and result:
 
-> Block quotes are
-> written like so.
->
-> They can span multiple paragraphs,
-> if you like.
+* [Source](http://github.github.com/github-flavored-markdown/sample_content.html)
+* [Result](http://github.com/mojombo/github-flavored-markdown/issues/#issue/1)
 
-Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex. "it's all in
-chapters 12--14"). Three dots ... will be converted to an ellipsis.
+If you're interested in how we render Markdown files, you might want to check out [Redcarpet](https://github.com/vmg/redcarpet), our Ruby interface to the [Sundown](https://www.github.com/vmg/sundown) library.
 
+Differences from traditional Markdown
+-------------------------------------
 
+### Newlines
 
-An h2 header
-------------
+The biggest difference that GFM introduces is in the handling of linebreaks. With SM you can hard wrap paragraphs of text and they will be combined into a single paragraph. We find this to be the cause of a huge number of unintentional formatting errors. GFM treats newlines in paragraph-like content as real line breaks, which is probably what you intended.
 
-Here's a numbered list:
+The next paragraph contains two phrases separated by a single newline character:
 
- 1. first item
- 2. second item
- 3. third item
+    Roses are red
+    Violets are blue
 
-Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:
+becomes
 
-    # Let me re-iterate ...
-    for i in 1 .. 10 { do-something(i) }
+Roses are red  
+Violets are blue
 
-As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:
+### Multiple underscores in words
 
-```
-define foobar() {
-    print "Welcome to flavor country!";
-}
-```
+It is not reasonable to italicize just _part_ of a word, especially when you're dealing with code and names often appear with multiple underscores. Therefore, GFM ignores multiple underscores in words.
 
+    perform_complicated_task
+    do_this_and_do_that_and_another_thing
 
-### An h3 header ###
+becomes
 
-(which makes copying & pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it:
+perform\_complicated\_task
+do\_this\_and\_do\_that\_and\_another\_thing
 
-```python
-import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print i
-```
+### URL autolinking
+
+GFM will autolink standard URLs, so if you want to link to a URL (instead of setting link text), you can simply enter the URL and it will be turned into a link to that URL.
+
+### Fenced code blocks
+
+Markdown converts text with four spaces at the front of each line to code blocks. GFM supports that, but we also support fenced blocks. Just wrap your code blocks in <code>\`\`\`</code> and you won't need to indent manually to trigger a code block.
+
+### Syntax highlighting
+
+We take code blocks a step further and add syntax highlighting if you request it. In your fenced block, add an optional language identifier and we'll run it through syntax highlighting. For example, to syntax highlight Ruby code:
+
+    ```ruby
+    require 'redcarpet'
+    markdown = Redcarpet.new("Hello World!")
+    puts markdown.to_html
+    ```
 
 
-Now a nested list:
+A bit of the GitHub spice
+-------------------------
 
- 1. First, get these ingredients:
+### References
 
-      * carrots
-      * celery
-      * lentils
+In addition to the changes in the previous section, certain references are auto-linked:
 
- 2. Boil some water.
+    * SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+    * User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+    * User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+    * \#Num: #1
+    * User/#Num: mojombo#1
+    * User/Project#Num: mojombo/god#1
 
- 3. Dump everything in the pot and follow
-    this algorithm:
+becomes
 
-        find wooden spoon
-        uncover pot
-        stir
-        cover pot
-        balance wooden spoon precariously on pot handle
-        wait 10 minutes
-        goto first step (or shut off burner when done)
+<ul>
+<li>SHA: <a href="http://github.com/mojombo/github-flavored-markdown/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">be6a8cc</a></li>
+<li>User@SHA ref: <a href="http://github.com/mojombo/github-flavored-markdown/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">mojombo@be6a8cc</a></li>
+<li>User/Project@SHA: <a href="http://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">mojombo/god@be6a8cc</a></li>
+<li>#Num: <a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1" class="internal">#1</a></li>
+<li>User/#Num: <a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1">mojombo#1</a></li>
+<li>User/Project#Num: <a href="http://github.com/mojombo/god/issues/#issue/1">mojombo/god#1</a></li>
+</ul>
 
-    Do not bump wooden spoon or it will fall.
+### Task Lists
+#### H4 title
+##### H5 title
+###### H6 title
 
-Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above). Here's a link to [a
-website](http://foo.bar). Here's a link to a [local
-doc](local-doc.html). Here's a footnote [^1].
+Further, lists can be turned into [Task Lists](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments) by prefacing list items with `[ ]` or `[x]` (incomplete or complete, respectively).
 
-[^1]: Footnote text goes here.
+    - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+    - [x] list syntax required (any unordered or ordered list supported)
+    - [x] this is a complete item
+    - [ ] this is an incomplete item
 
-Tables can look like this:
+This feature is enabled for **Issue and Pull Request descriptions and comments**. In those contexts, task lists will be rendered with checkboxes that you can check on and off.
 
-size  material      color
-----  ------------  ------------
-9     leather       brown
-10    hemp canvas   natural
-11    glass         transparent
+See the [Task Lists blog post](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments) for more details.
 
-Table: Shoes, their sizes, and what they're made of
+Code
+----
 
-(The above is the caption for the table.) Here's a definition list:
+The newline and underscore modification code can be seen below. If you find a bug in the rendering, we'd love to hear about it.
+Browse through open Issues and report new Issues on the [GitHub-flavored Markdown Issues page](https://github.com/github/github-flavored-markdown/issues).
 
-apples
-  : Good for making applesauce.
-oranges
-  : Citrus!
-tomatoes
-  : There's no "e" in tomatoe.
-
-Again, text is indented 4 spaces. (Alternately, put blank lines in
-between each of the above definition list lines to spread things
-out more.)
-
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
-
-Done.
+<script src="http://gist.github.com/118964.js"></script>
