@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctasia</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/doctasia.css">
+    <link rel="stylesheet" type="text/css" href="css/prettify.css">
+
+    <style type="text/css">
+        /*body {*/
+            /*padding-top: 60px;*/
+            /*padding-bottom: 40px;*/
+        /*}*/
+        .sidebar-nav {
+            margin-top: 60px;
+            padding-left: 10px;
+            max-width: 300px;
+        }
+
+        @media (max-width: 980px) {
+            /* Enable use of floated navbar text */
+            .navbar-text.pull-right {
+                float: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<a name="top"></a>
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="index.html">Doctasia</a>
+            <div class="nav-collapse collapse">
+                <p class="navbar-text pull-right">
+                    <a href="https://github.com/nherment/doctasia">Doctasia is on GitHub</a>
+                </p>
+                <ul class="nav">
+                    <li ><a href="index.html">Home</a></li>
+<li ><a href="Configuration.html">Configuration</a></li>
+<li class="active"><a href="Example.html">Example</a></li>
+<li ><a href="License.html">License</a></li>
+</ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid" id="content">
+        <div class="span3">
+            <div class="sidebar-nav hidden-phone navbar-fixed-top">
+                <h1>Example</h1>
+                    <ul class="nav nav-list">
+                        <li class="nav-2" class="active"><a href="#layout__default">layout: default</a></li>
+<li class="nav-1" class="active"><a href="#Introduction_to_GFM">Introduction to GFM</a></li>
+<li class="nav-2" class="active"><a href="#Differences_from_traditional_Markdown">Differences from traditional Markdown</a></li>
+<li class="nav-3" class="active"><a href="#Newlines">Newlines</a></li>
+<li class="nav-3" class="active"><a href="#Multiple_underscores_in_words">Multiple underscores in words</a></li>
+<li class="nav-3" class="active"><a href="#URL_autolinking">URL autolinking</a></li>
+<li class="nav-3" class="active"><a href="#Fenced_code_blocks">Fenced code blocks</a></li>
+<li class="nav-3" class="active"><a href="#Syntax_highlighting">Syntax highlighting</a></li>
+<li class="nav-2" class="active"><a href="#A_bit_of_the_GitHub_spice">A bit of the GitHub spice</a></li>
+<li class="nav-3" class="active"><a href="#References">References</a></li>
+<li class="nav-3" class="active"><a href="#Task_Lists">Task Lists</a></li>
+<li class="nav-4" class="active"><a href="#H4_title">H4 title</a></li>
+<li class="nav-5" class="active"><a href="#H5_title">H5 title</a></li>
+<li class="nav-2" class="active"><a href="#Code">Code</a></li>
+</ul>
+                    <br/>
+                    <a href="#top">back to top</a>
+                    </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+            <hr>
+<p>title: Introduction</p>
+<a name="layout__default"></a><h2>layout: default</h2>
+<a name="Introduction_to_GFM"></a><h1>Introduction to GFM</h1>
+<p>GitHub uses what we&#39;re calling &quot;GitHub Flavored Markdown&quot; (GFM) for messages, issues, and comments. It differs from standard Markdown (SM) in a few significant ways and adds some additional functionality.</p>
+<p>If you&#39;re not already familiar with Markdown, you should spend 15 minutes and go over the excellent <a href="http://daringfireball.net/projects/markdown/syntax">Markdown Syntax Guide</a> at Daring Fireball.</p>
+<p>If you prefer to learn by example, see the following source and result:</p>
+<ul>
+<li><a href="http://github.github.com/github-flavored-markdown/sample_content.html">Source</a></li>
+<li><a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1">Result</a></li>
+</ul>
+<p>If you&#39;re interested in how we render Markdown files, you might want to check out <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, our Ruby interface to the <a href="https://www.github.com/vmg/sundown">Sundown</a> library.</p>
+<a name="Differences_from_traditional_Markdown"></a><h2>Differences from traditional Markdown</h2>
+<a name="Newlines"></a><h3>Newlines</h3>
+<p>The biggest difference that GFM introduces is in the handling of linebreaks. With SM you can hard wrap paragraphs of text and they will be combined into a single paragraph. We find this to be the cause of a huge number of unintentional formatting errors. GFM treats newlines in paragraph-like content as real line breaks, which is probably what you intended.</p>
+<p>The next paragraph contains two phrases separated by a single newline character:</p>
+<pre class="prettyprint"><code>Roses are red
+Violets are blue</code></pre>
+<p>becomes</p>
+<p>Roses are red<br>Violets are blue</p>
+<a name="Multiple_underscores_in_words"></a><h3>Multiple underscores in words</h3>
+<p>It is not reasonable to italicize just <em>part</em> of a word, especially when you&#39;re dealing with code and names often appear with multiple underscores. Therefore, GFM ignores multiple underscores in words.</p>
+<pre><code>perform_complicated_task
+do_this_and_do_that_and_another_thing</code></pre>
+<p>becomes</p>
+<p>perform_complicated_task
+do_this_and_do_that_and_another_thing</p>
+<a name="URL_autolinking"></a><h3>URL autolinking</h3>
+<p>GFM will autolink standard URLs, so if you want to link to a URL (instead of setting link text), you can simply enter the URL and it will be turned into a link to that URL.</p>
+<a name="Fenced_code_blocks"></a><h3>Fenced code blocks</h3>
+<p>Markdown converts text with four spaces at the front of each line to code blocks. GFM supports that, but we also support fenced blocks. Just wrap your code blocks in <code>```</code> and you won&#39;t need to indent manually to trigger a code block.</p>
+<a name="Syntax_highlighting"></a><h3>Syntax highlighting</h3>
+<p>We take code blocks a step further and add syntax highlighting if you request it. In your fenced block, add an optional language identifier and we&#39;ll run it through syntax highlighting. For example, to syntax highlight Ruby code:</p>
+<pre><code>```ruby
+require &#39;redcarpet&#39;
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+```</code></pre>
+<a name="A_bit_of_the_GitHub_spice"></a><h2>A bit of the GitHub spice</h2>
+<a name="References"></a><h3>References</h3>
+<p>In addition to the changes in the previous section, certain references are auto-linked:</p>
+<pre><code>* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* \#Num: #1
+* User/#Num: mojombo#1
+* User/Project#Num: mojombo/god#1</code></pre>
+<p>becomes</p>
+<ul>
+<li>SHA: <a href="http://github.com/mojombo/github-flavored-markdown/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">be6a8cc</a></li>
+<li>User@SHA ref: <a href="http://github.com/mojombo/github-flavored-markdown/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">mojombo@be6a8cc</a></li>
+<li>User/Project@SHA: <a href="http://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">mojombo/god@be6a8cc</a></li>
+<li>#Num: <a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1" class="internal">#1</a></li>
+<li>User/#Num: <a href="http://github.com/mojombo/github-flavored-markdown/issues/#issue/1">mojombo#1</a></li>
+<li>User/Project#Num: <a href="http://github.com/mojombo/god/issues/#issue/1">mojombo/god#1</a></li>
+</ul>
+
+<a name="Task_Lists"></a><h3>Task Lists</h3>
+<a name="H4_title"></a><h4>H4 title</h4>
+<a name="H5_title"></a><h5>H5 title</h5>
+<h6>H6 title</h6>
+<p>Further, lists can be turned into <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">Task Lists</a> by prefacing list items with <code>[ ]</code> or <code>[x]</code> (incomplete or complete, respectively).</p>
+<pre><code>- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item</code></pre>
+<p>This feature is enabled for <strong>Issue and Pull Request descriptions and comments</strong>. In those contexts, task lists will be rendered with checkboxes that you can check on and off.</p>
+<p>See the <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">Task Lists blog post</a> for more details.</p>
+<a name="Code"></a><h2>Code</h2>
+<p>The newline and underscore modification code can be seen below. If you find a bug in the rendering, we&#39;d love to hear about it.
+Browse through open Issues and report new Issues on the <a href="https://github.com/github/github-flavored-markdown/issues">GitHub-flavored Markdown Issues page</a>.</p>
+<script src="http://gist.github.com/118964.js"></script></div><!--/span-->
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>This static website was generated by <a href="http://nherment.github.com/doctasia/">Doctasia</a></p>
+    </footer>
+
+</div><!--/.fluid-container-->
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"/>
+<script type="text/javascript" src="js/bootstrap.min.js"/>
+
+</body>
+</html>
