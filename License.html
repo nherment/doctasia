@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/doctasia.css">
-    <link rel="stylesheet" type="text/css" href="css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="css/prettify/github.css">
+
 
     <style type="text/css">
         /*body {*/
@@ -35,37 +36,29 @@
 </head>
 <body>
 <a name="top"></a>
-<div class="navbar navbar-inverse">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="index.html">Doctasia</a>
-            <div class="nav-collapse collapse">
-                <p class="navbar-text pull-right">
-                    <a href="https://github.com/nherment/doctasia">Doctasia is on GitHub</a>
-                </p>
-                <ul class="nav">
-                    <li ><a href="index.html">Home</a></li>
-<li ><a href="Example.html">Example</a></li>
-<li class="active"><a href="License.html">License</a></li>
-</ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid">
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h1 class="text-center"><a class="brand" href="index.html">Doctasia</a></h1>
+
+            <ul class="top-menu">
+                <li><a href="index.html" >Home</a>
+</li>
+                <li><a href="Example.html" >Example</a>
+</li>
+                <li><a href="License.html" class="active">License</a>
+</li>
+                </ul>
+        </div>
+    </div>
     <div class="row-fluid" id="content">
-        <div class="span3 hidden-phone">
-            <div class="sidebar-nav navbar-fixed-top">
-                <h1>License</h1>
-                    <ul class="nav nav-list">
+        <div class="span3 hidden-phone" style="position: relative;">
+            <div class="span3 left-menu">
+                <ul class="nav nav-list">
                         </ul>
-                    </div><!--/.well -->
+                    </div>
         </div><!--/span-->
         <div class="span9">
             <p>Copyright (c) 2013 Nicolas Herment</p>
@@ -94,8 +87,17 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
 </div><!--/.fluid-container-->
 
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"/>
-<script type="text/javascript" src="js/bootstrap.min.js"/>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        prettyPrint()
+    })
+
+</script>
 
 </body>
 </html>
