@@ -9,6 +9,12 @@ if(args.hasOwnProperty("--help") || args.hasOwnProperty("-h")) {
 
 } else {
 
+    var theme = "deep-ocean"
+
+    if(args["-t"]) {
+        theme = args["-t"]
+    }
+
     var outPutDir = "docs_out"
 
     if(args["-o"]) {
@@ -20,7 +26,7 @@ if(args.hasOwnProperty("--help") || args.hasOwnProperty("-h")) {
     if(args["-m"]) {
         manifest = args["-m"]
     }
-    HTMLCompiler.compile(manifest, outPutDir)
+    HTMLCompiler.compile(manifest, outPutDir, theme)
 
 }
 
@@ -39,6 +45,8 @@ function printHelp() {
     help += "-m\t\t path to the manifest describing the documentation to build (default is documentation.json)"
     help += "\n"
     help += "-o\t\t the directory in which the documentation will be exported. 'docs_out' by default"
+    help += "\n"
+    help += "-t\t\t the theme to use. Default 'white'. Available: 'white', 'deep-ocean"
     help += "\n"
     help += "-h\t\t display this "
 

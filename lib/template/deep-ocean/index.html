@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/doctasia.css">
-    <link rel="stylesheet" type="text/css" href="css/prettify.css">
+    <link rel="stylesheet" type="text/css" href="css/prettify/{prettify}.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/prettify-obsidian.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="css/sunburst.css">-->
 
     {#css}
         <link rel="stylesheet" type="text/css" href="{.}">
@@ -36,6 +38,7 @@
             }
         }
     </style>
+
 
 </head>
 <body>
@@ -96,8 +99,17 @@
 
 </div><!--/.fluid-container-->
 
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"/>
-<script type="text/javascript" src="js/bootstrap.min.js"/>
+<!--<script type="text/javascript" src="js/jquery-1.9.1.min.js"/>-->
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+
+    $(document).ready(function() {
+        prettyPrint()
+    })
+</script>
 
 </body>
 </html>
