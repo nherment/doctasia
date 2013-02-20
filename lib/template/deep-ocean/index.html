@@ -57,7 +57,7 @@
                     <a href="https://github.com/nherment/doctasia">Doctasia is on GitHub</a>
                 </p>
                 <ul class="nav">
-                    {#pages currentPageTitle=currentPage.title }
+                    {#pages currentPageTitle=currentPage.title}
                     <li {@eq key=currentPageTitle value=title}class="active"{/eq}><a href="{name}.html">{title}</a></li>{~n}
                     {/pages}
                 </ul>

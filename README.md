@@ -17,9 +17,10 @@
 You can configure how Doctasia generates your documentation with a manifest file.
 By default doctasia looks for a file named `documentation.json` in the `cwd`. All paths are relative to the `cwd`
 
-```json
+```
 {
     "title": "Doctasia", /* the website title */
+    "prettify": "tomorrow-night-eighties"
     "pages": [
         {
             "title": "Home", /* the name given to the page */

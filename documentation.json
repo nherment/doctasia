@@ -1,6 +1,6 @@
 {
     "title": "Doctasia",
-    "css": [],
+    "prettify": "github",
     "pages": [
         {
             "title": "Home",

@@ -1,8 +1,25 @@
 body {
     font-family: Georgia, serif;
+    color: #034769;
+    font-size: 16px;
+    text-align: justify;
 }
+
+a, a:visited{
+    color: #034769;
+}
+
+a:hover {
+    color: #FF9200;
+}
+
+.brand {
+   font-size: 50px;
+}
+
 .nav-1 {
     padding-left: 0px;
+    font-weight: bold;
 }
 .nav-2 {
     padding-left: 3px;
@@ -18,47 +35,69 @@ body {
 }
 
 h1 {
-    color: #034769;
     font-size: 28px;
 }
 
 h2 {
-    color: #086FA1;
     font-size: 25px;
 }
 
 h3 {
-    color: #086FA1;
     font-size: 20px;
 }
 
 h4 {
-    color: #086FA1;
     font-size: 18px;
 }
 
 h5 {
-    color: #086FA1;
     font-size: 17px;
 }
 
 h6 {
-    color: #086FA1;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.navbar-inverse .navbar-inner {
+.left-menu {
+    position:fixed;
+    top: 130px;
+}
+
+.top-menu {
+    margin: 30px auto 50px auto;
+    text-align: center;
+}
+
+.top-menu > li {
+    padding: 0px;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0px 5px 0px 5px;
+}
+
+.top-menu > li > a, .top-menu > li > a:visited {
+
+    min-height: 30px;
+
+    padding: 10px 20px 10px 20px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #034769;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.top-menu > li > a.active {
+    background-color: #0B61A4;
+    color: #FFAD40
+}
+
+.top-menu > li > a:hover {
     background-color: #034769;
-    background-image: none;
-}
-.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
-    color: #FFC373;
-    background-color: #25567B;
-}
-.navbar-inverse .nav > a, .navbar-inverse .nav > a:hover, .navbar-inverse .nav > a:focus {
     color: #FF9200;
-}
-
-a:hover {
-    color: #FF9200;
+    text-decoration: none;
 }
