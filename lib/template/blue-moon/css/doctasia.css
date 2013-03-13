@@ -1,0 +1,88 @@
+body {
+    font-family: Serial, sans-serif;
+    color: #BBBBBB;
+    font-size: 16px;
+    text-align: justify;
+    background-image:url('../img/texture-200x200-242424.png');
+    background-color: #242424;
+
+}
+
+.left-nav {
+    list-style-type: none;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.nav-1 > a, .nav-1 > a:visited, .nav-1 > a:focus, .nav-1 > a:hover {
+    padding-left: 0px;
+    color: #63Add0;
+    text-decoration: none;
+}
+.nav-2 > a, .nav-2 > a:visited, .nav-2 > a:focus, .nav-2 > a:hover {
+    padding-left: 3px;
+    color: #DDDDDD;
+    text-decoration: none;
+}
+.nav-3 {
+    padding-left: 10px;
+}
+.nav-4 {
+    padding-left: 17px;
+}
+.nav-5 {
+    padding-left: 23px;
+}
+
+h1 {
+    color: #63Add0;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+h2 {
+    color: #DDDDDD;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 17px;
+}
+
+h6 {
+    color: #086FA1;
+    font-size: 16px;
+}
+
+.navbar-inverse .navbar-inner {
+    background-color: #0B61A4;
+    background-image: none;
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    color: #FFC373;
+    background-color: #033E6B;
+}
+
+.navbar-inverse .nav li > a, .navbar-inverse .nav li > a:visited {
+    color: #FFC373;
+}
+
+.navbar-inverse .nav li > a:hover, .navbar-inverse .nav li > a:focus {
+    color: #FF9200;
+}
+
+a:hover {
+    color: #FF9200;
+}
+
+a, a:visited {
+    color: #FF9200;
+}

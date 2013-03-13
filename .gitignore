@@ -16,3 +16,7 @@ npm-debug.log
 .idea/
 node_modules/
 out/
+
+.DS_Store
+
+/docs_out/

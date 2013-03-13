@@ -1,6 +1,6 @@
 {
     "name": "doctasia",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "author": "Nicolas Herment <nherment@gmail.com>",
     "preferGlobal": "true",
     "dependencies": {

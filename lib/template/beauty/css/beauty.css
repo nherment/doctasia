@@ -1,0 +1,49 @@
+html {
+    overflow-y: scroll;
+}
+
+
+body {
+    margin: 10px 0px 0px 0px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+ul, ol, p {
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+    padding: 0em 0em .1em 0em;
+    margin: 0em 0em .7em 0em;
+    color:#009FD4;
+    border-bottom: 3px double #009FD4;
+}
+
+h2 {
+    font-size: 1.3em;
+    color:#009FD4;
+    border-bottom: 1px solid #009FD4;
+}
+
+h3 {
+    color:#009FD4;
+    font-size: 1.2em;
+}
+
+h4 {
+    color:#009FD4;
+    font-size: 1.1em;
+}
+
+h5 {
+    color:#009FD4;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h6 {
+    color:#009FD4;
+    font-size: 1em;
+}
